@@ -1,0 +1,11 @@
+(
+	cout_sig,
+	result_sig[]
+) = lpm_add_sub0	(
+	.add_sub = add_sub_sig,
+	.dataa[] = dataa_sig[]
+)
+RETURNS (
+	.cout,
+	.result[]
+);

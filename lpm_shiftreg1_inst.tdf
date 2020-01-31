@@ -1,0 +1,11 @@
+(
+	q_sig[]
+) = lpm_shiftreg1	(
+	.clock = clock_sig,
+	.data[] = data_sig[],
+	.load = load_sig,
+	.shiftin = shiftin_sig
+)
+RETURNS (
+	.q[]
+);

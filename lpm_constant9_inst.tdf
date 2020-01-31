@@ -1,0 +1,8 @@
+(
+	result_sig[]
+) = lpm_constant9	(
+
+)
+RETURNS (
+	.result[]
+);

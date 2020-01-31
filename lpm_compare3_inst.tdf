@@ -1,0 +1,13 @@
+(
+	AeB_sig,
+	AgB_sig,
+	AlB_sig
+) = lpm_compare3	(
+	.dataa[] = dataa_sig[],
+	.datab[] = datab_sig[]
+)
+RETURNS (
+	.AeB,
+	.AgB,
+	.AlB
+);

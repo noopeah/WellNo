@@ -1,0 +1,11 @@
+(
+	quotient_sig[],
+	remain_sig[]
+) = divide0	(
+	.denom[] = denom_sig[],
+	.numer[] = numer_sig[]
+)
+RETURNS (
+	.quotient[],
+	.remain[]
+);

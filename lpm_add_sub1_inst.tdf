@@ -1,0 +1,15 @@
+(
+	cout_sig,
+	overflow_sig,
+	result_sig[]
+) = lpm_add_sub1	(
+	.add_sub = add_sub_sig,
+	.cin = cin_sig,
+	.dataa[] = dataa_sig[],
+	.datab[] = datab_sig[]
+)
+RETURNS (
+	.cout,
+	.overflow,
+	.result[]
+);

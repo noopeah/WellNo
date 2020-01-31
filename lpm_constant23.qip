@@ -1,0 +1,7 @@
+set_global_assignment -name IP_TOOL_NAME "LPM_CONSTANT"
+set_global_assignment -name IP_TOOL_VERSION "9.1"
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "lpm_constant23.tdf"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "lpm_constant23.bsf"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "lpm_constant23_inst.tdf"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "lpm_constant23.inc"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "lpm_constant23.cmp"]
