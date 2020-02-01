@@ -1,0 +1,25 @@
+{
+  "name": "wn_compiler",
+  "version": "0.0.1",
+  "description": "the well no compiler",
+  "main": "index.js",
+  "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node index.js",
+      "devstart": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fiiqlae/WellNo.git"
+  },
+  "author": "Maxim Kaganovich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fiiqlae/WellNo/issues"
+  },
+  "homepage": "https://github.com/fiiqlae/WellNo#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  }
+}

@@ -1,0 +1,32 @@
+
+function findMarks(source){
+    var marks = [];
+    var totalOffset = 0;
+    for (var i = 0; i < source.length; i++){
+	var spl = source[i].split(' ');
+	totalOffset += spl.length;
+	if(spl[0].startsWith('@')){
+	    marks.push({offset: totalOffset, markName: spl[0].substring(0)});
+	    source.splice(i, 1);
+	    i--;
+	} else {
+	    marks.push({markName: "NM"});
+	}
+    }
+    return marks;
+}
+
+function replaceNames(source, marks){
+    for(var i; i < source.length; i++){
+	var spl = source[i].split(' ');
+	for (var j; j < spl.length; j++){
+	    console.log(spl[j]);
+	    console.log(marks[i].markName);
+	    if(spl[j] === marks[i].markName) spl[j] = marks[i].offset;
+	}
+	source[i] = spl.join();
+    }
+    return source;
+}
+
+module.exports = {findMarks, replaceNames};

@@ -1,0 +1,31 @@
+const express = require('express');
+
+const app = express();
+
+const bodyParser = require('body-parser');
+
+const CP = require('./codeParser.js');
+const MP = require('./gotoProcessing.js');
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.listen(3000);
+
+var compiled = [];
+var joined = [];
+
+app.post('/submit', ((req, res) =>
+		     {var src = req.body.sources.replace(/\;/g, '\n');
+		      console.log(src.split('\n'));
+		      var marks = MP.findMarks(src.split('\n'));
+		      var prepared = MP.replaceNames(marks, src.split('\n')).join('\n');
+		      console.log(prepared);
+		      compiled = CP(prepared);
+		      res.send('submitted '+src);
+		      res.end('terminted');}));
+app.get('/compiled', ((req, res) => {
+    compiled.map((e) => e.map((e1) => joined.push(e1)));
+    res.send(joined);
+}));
+
