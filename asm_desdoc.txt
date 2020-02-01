@@ -6,7 +6,7 @@ FOR STRUGGLES THE OPERAND ORDER IS REVERSED HERE AHHHAHAHAHAHAHAHAHAHAAHHAAHAHH
 0000.0001 01x  	mov addr addr
 0100.0001 41x	mov reg addr
 1000.0001 81x 	mov addr reg
-1100.0001 c1x 	mov [reg] reg
+1100.0001 c1x 	mov reg reg
 
 1000.0010 82x 	swp reg reg
 
@@ -31,21 +31,21 @@ FOR STRUGGLES THE OPERAND ORDER IS REVERSED HERE AHHHAHAHAHAHAHAHAHAHAAHHAAHAHH
 1001.0001 91x	push reg
 1001.0010 92x	pop reg
 
-0001.0011 13x	jmp hcval
+				0001.0011 13x	jmp hcval
 1001.0011 93x	jmp reg
 
 1001.0100 94x	cmp reg reg
 
-0001.0101 15x   jls hcval 
+				0001.0101 15x   jls hcval 
 1001.0101 95x 	jls reg
 
-0001.0110 16x 	jgt hcval 
+				0001.0110 16x 	jgt hcval 
 1001.0110 96x 	jgt reg
 
-0001.0111 17x	jz hcval 
+				0001.0111 17x	jz hcval 
 1001.0111 97x	jz reg
-
-0001.1000 18x	jnz hcval 
+	  
+				0001.1000 18x	jnz hcval 
 1001.1000 98x	jnz reg
 
 0000.0000 00x	nop
@@ -84,62 +84,21 @@ top 1024 bytes are considered rom
 e.g. rom is 4 banks
      ram is 60 banks
 
-----------
+---
+---------
 add numbers between 0xXX and 0xYY
 
     	    str a, 0xXX
 	    str x, 0x0
 	    str z, 0xYY
-.mk0	    mov y, [a]
+	    @mk0
+	    mov y, [a]
 	    addc x, y
 	    cmp a, z
-	    jz .end
+	    jz Dend
 	    inc a
-	    jmp .mk0
-.end	    nop
+	    jmp Dmk0
+	    @end
+	    nop
  			   09                                           18
 19 00 XX 19 02 00 19 03 YY C1 01 00 83 01 02 94 00 03 16 18 8F 00 13 09 00
-
-
-
-const opcodes = [
-    0x19,// str hcval reg 
-    0x59,// str hcval addr
-    0x01,// mov addr addr
-    0x41,// mov reg addr
-    0x81,// mov addr reg
-    0xc1,// mov [reg] reg
-    0x82,// swp reg reg
-    0x83,// addc reg reg
-    0x84,// subc reg reg
-    0x85,// mult reg reg
-    0x86,// qure reg reg 
-    0x87,// and reg reg
-    0x88,// inv reg
-    0x89,// xor reg reg
-    0x8a,// or reg reg
-    0x8b,// asl reg reg
-    0x8c,// asr reg reg
-    0x8d,// lsl reg reg
-    0x8e,// lsr reg reg
-    0x8f,// inc reg
-    0x90,// dec reg
-    0x91,// push reg
-    0x92,// pop reg
-    0x13,// jmp hcval
-    0x93,// jmp reg
-    0x94,// cmp reg reg
-    0x15,// jls hcval 
-    0x95,// jls reg
-    0x16,// jgt hcval 
-    0x96,// jgt reg
-    0x17,// jz hcval 
-    0x97,// jz reg
-    0x18,// jnz hcval 
-    0x98,// jnz reg
-    0x00 // nop
-];
-
-
-
-module.exports(Dictionary);
