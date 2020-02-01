@@ -99,3 +99,47 @@ add numbers between 0xXX and 0xYY
 .end	    nop
  			   09                                           18
 19 00 XX 19 02 00 19 03 YY C1 01 00 83 01 02 94 00 03 16 18 8F 00 13 09 00
+
+
+
+const opcodes = [
+    0x19,// str hcval reg 
+    0x59,// str hcval addr
+    0x01,// mov addr addr
+    0x41,// mov reg addr
+    0x81,// mov addr reg
+    0xc1,// mov [reg] reg
+    0x82,// swp reg reg
+    0x83,// addc reg reg
+    0x84,// subc reg reg
+    0x85,// mult reg reg
+    0x86,// qure reg reg 
+    0x87,// and reg reg
+    0x88,// inv reg
+    0x89,// xor reg reg
+    0x8a,// or reg reg
+    0x8b,// asl reg reg
+    0x8c,// asr reg reg
+    0x8d,// lsl reg reg
+    0x8e,// lsr reg reg
+    0x8f,// inc reg
+    0x90,// dec reg
+    0x91,// push reg
+    0x92,// pop reg
+    0x13,// jmp hcval
+    0x93,// jmp reg
+    0x94,// cmp reg reg
+    0x15,// jls hcval 
+    0x95,// jls reg
+    0x16,// jgt hcval 
+    0x96,// jgt reg
+    0x17,// jz hcval 
+    0x97,// jz reg
+    0x18,// jnz hcval 
+    0x98,// jnz reg
+    0x00 // nop
+];
+
+
+
+module.exports(Dictionary);
