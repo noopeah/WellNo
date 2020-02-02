@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Stratix II"
 set_global_assignment -name DEVICE AUTO
-set_global_assignment -name TOP_LEVEL_ENTITY WN_opcode_loader_GPR
+set_global_assignment -name TOP_LEVEL_ENTITY WN_opcode_loader
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:49:53  JANUARY 25, 2020"
 set_global_assignment -name LAST_QUARTUS_VERSION 9.1
@@ -87,7 +87,6 @@ set_global_assignment -name QIP_FILE lpm_compare3.qip
 set_global_assignment -name QIP_FILE lpm_compare4.qip
 set_global_assignment -name QIP_FILE lpm_mux3.qip
 set_global_assignment -name BDF_FILE WN_ALU.bdf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE WNALUTEST.vwf
 set_global_assignment -name QIP_FILE lpm_counter3.qip
 set_global_assignment -name QIP_FILE lpm_decode3.qip
 set_global_assignment -name QIP_FILE lpm_counter4.qip
@@ -131,9 +130,17 @@ set_global_assignment -name QIP_FILE lpm_constant34.qip
 set_global_assignment -name QIP_FILE lpm_dff2.qip
 set_global_assignment -name QIP_FILE lpm_constant35.qip
 set_global_assignment -name QIP_FILE lpm_counter6.qip
+set_global_assignment -name BDF_FILE WN_opcode_loader_GPR.bdf
+set_global_assignment -name SIMULATOR_GENERATE_SIGNAL_ACTIVITY_FILE OFF
+set_global_assignment -name QIP_FILE lpm_dff3.qip
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE WNILOADERTEST.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
-set_global_assignment -name BDF_FILE WN_opcode_loader_GPR.bdf
+set_global_assignment -name BDF_FILE WN_opcode_loader.bdf
+set_global_assignment -name QIP_FILE lpm_compare7.qip
+set_global_assignment -name QIP_FILE lpm_compare8.qip
+set_global_assignment -name QIP_FILE lpm_bustri2.qip
+set_global_assignment -name QIP_FILE lpm_bustri3.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

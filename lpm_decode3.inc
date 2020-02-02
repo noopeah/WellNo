@@ -15,11 +15,14 @@
 
 FUNCTION lpm_decode3 
 (
-	data[1..0]
+	data[2..0]
 )
 
 RETURNS (
 	eq0,
 	eq1,
-	eq2
+	eq2,
+	eq3,
+	eq4,
+	eq5
 );

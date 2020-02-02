@@ -1,0 +1,31 @@
+instructon loader output to memory and register assembly control bus ``ilcb``:
+	single read memory >
+	[7..0] program counter >
+	[5..0] memory bank >
+	[1..0] service reg selector >
+	single service reg write >
+	single valid data on bus >
+	---
+	| ||||.|||| |||.||| || | |=> length 19 => [18..0] 
+	r pc        bnk     rs w v
+	0 1234 5678 901 234 56 7 8
+
+
+fetch instruction ===
+      ilcb.r = hi
+      ilcb.pc = self.pc
+      ilcb.bnk = self.bnk
+      ilcb.rs = lo
+      ilcb.w = lo
+
+fetch mandatory operand === fetch instruction
+fetch optional operand === fetch instuction
+
+---
+
+1: fetch instruction === hi
+2: databus contains the instruction, we parse it and determine the amount of operands; next === hi
+3: fetch mandatory operand === hi
+4: databus contains the operand, we store it; next === hi
+5: done | fetch optional operand === hi
+6: databus contains the operand, we store it; done === hi

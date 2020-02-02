@@ -1,7 +1,8 @@
 (
 	q_sig[]
 ) = lpm_counter6	(
-	.clock = clock_sig
+	.clock = clock_sig,
+	.sclr = sclr_sig
 )
 RETURNS (
 	.q[]

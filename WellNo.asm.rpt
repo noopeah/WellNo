@@ -1,5 +1,5 @@
 Assembler report for WellNo
-Thu Jan 30 19:08:19 2020
+Sun Feb 02 19:43:20 2020
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Jan 30 19:08:19 2020 ;
+; Assembler Status      ; Successful - Sun Feb 02 19:43:20 2020 ;
 ; Revision Name         ; WellNo                                ;
 ; Top-level Entity Name ; WN_opcode_loader_GPR                  ;
 ; Family                ; Stratix II                            ;
@@ -96,7 +96,7 @@ applicable agreement for further details.
 +----------------+------------------------------------------------------+
 ; Device         ; EP2S15F484C3                                         ;
 ; JTAG usercode  ; 0xFFFFFFFF                                           ;
-; Checksum       ; 0x0030A5E7                                           ;
+; Checksum       ; 0x0029EE66                                           ;
 +----------------+------------------------------------------------------+
 
 
@@ -107,8 +107,8 @@ applicable agreement for further details.
 +--------------------+--------------------------------------------------+
 ; Device             ; EPC16                                            ;
 ; JTAG usercode      ; 0xFFFFFFFF                                       ;
-; Checksum           ; 0x1ED0D55E                                       ;
-; Compression Ratio  ; 2                                                ;
+; Checksum           ; 0x1EEDB5AA                                       ;
+; Compression Ratio  ; 3                                                ;
 +--------------------+--------------------------------------------------+
 
 
@@ -118,13 +118,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
-    Info: Processing started: Thu Jan 30 19:08:17 2020
+    Info: Processing started: Sun Feb 02 19:43:18 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off WellNo -c WellNo
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 0 megabytes
-    Info: Processing ended: Thu Jan 30 19:08:19 2020
+    Info: Processing ended: Sun Feb 02 19:43:20 2020
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

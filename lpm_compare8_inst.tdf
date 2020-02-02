@@ -1,0 +1,8 @@
+(
+	AleB_sig
+) = lpm_compare8	(
+	.dataa[] = dataa_sig[]
+)
+RETURNS (
+	.AleB
+);

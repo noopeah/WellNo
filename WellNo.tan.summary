@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 7.876 ns
-From           : r
-To             : WN_memory_operations:inst2|WN_memory:inst|lpm_ram_dq0:inst|altsyncram:altsyncram_component|altsyncram_utc1:auto_generated|ram_block1a17~porta_datain_reg0
+Actual Time    : 5.484 ns
+From           : bd_db[5]
+To             : lpm_dff3:inst13|lpm_ff:lpm_ff_component|dffs[0]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 10.612 ns
-From           : inst12
-To             : done
+Actual Time    : 10.223 ns
+From           : lpm_counter5:inst2|lpm_counter:lpm_counter_component|cntr_slh:auto_generated|safe_q[0]
+To             : control_bus[14]
 From Clock     : clk
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 13.069 ns
-From           : gpr_idsel_en
-To             : reg_ovf
+Actual Time    : 1.982 ns
+From           : altera_internal_jtag~TDO
+To             : altera_reserved_tdo
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0
@@ -35,71 +35,41 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 1.814 ns
+Actual Time    : 1.142 ns
 From           : altera_internal_jtag~TDIUTAP
-To             : wn_arity:inst11|lpm_constant2:mov_a_a|lpm_constant:lpm_constant_component|lpm_constant_lg8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr|WORD_SR[3]
+To             : sld_hub:auto_hub|tdo_bypass_reg
 From Clock     : --
 To Clock       : altera_internal_jtag~TCKUTAP
-Failed Paths   : 0
-
-Type           : Clock Setup: 'clk'
-Slack          : N/A
-Required Time  : None
-Actual Time    : 128.50 MHz ( period = 7.782 ns )
-From           : lpm_counter5:inst4|lpm_counter:lpm_counter_component|cntr_slh:auto_generated|safe_q[5]
-To             : WN_memory_operations:inst2|WN_memory:inst|lpm_ram_dq0:inst|altsyncram:altsyncram_component|altsyncram_utc1:auto_generated|ram_block1a6~porta_we_reg
-From Clock     : clk
-To Clock       : clk
 Failed Paths   : 0
 
 Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 267.67 MHz ( period = 3.736 ns )
+Actual Time    : 263.44 MHz ( period = 3.796 ns )
 From           : sld_hub:auto_hub|irsr_reg[5]
 To             : sld_hub:auto_hub|tdo
 From Clock     : altera_internal_jtag~TCKUTAP
 To Clock       : altera_internal_jtag~TCKUTAP
 Failed Paths   : 0
 
-Type           : Clock Setup: 'svc_write_en'
+Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
-From           : lpm_counter6:inst20|lpm_counter:lpm_counter_component|cntr_olh:auto_generated|safe_q[0]
-To             : lpm_counter6:inst20|lpm_counter:lpm_counter_component|cntr_olh:auto_generated|safe_q[1]
-From Clock     : svc_write_en
-To Clock       : svc_write_en
-Failed Paths   : 0
-
-Type           : Clock Setup: 'load_instr'
-Slack          : N/A
-Required Time  : None
-Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
-From           : lpm_counter5:inst4|lpm_counter:lpm_counter_component|cntr_slh:auto_generated|safe_q[0]
-To             : lpm_counter5:inst4|lpm_counter:lpm_counter_component|cntr_slh:auto_generated|safe_q[5]
-From Clock     : load_instr
-To Clock       : load_instr
+Actual Time    : 367.51 MHz ( period = 2.721 ns )
+From           : lpm_dff3:inst13|lpm_ff:lpm_ff_component|dffs[0]
+To             : lpm_counter3:inst5|lpm_counter:lpm_counter_component|cntr_4pi:auto_generated|safe_q[2]
+From Clock     : clk
+To Clock       : clk
 Failed Paths   : 0
 
 Type           : Clock Hold: 'clk'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : lpm_counter5:inst4|lpm_counter:lpm_counter_component|cntr_slh:auto_generated|safe_q[0]
-To             : lpm_counter5:inst4|lpm_counter:lpm_counter_component|cntr_slh:auto_generated|safe_q[0]
+From           : lpm_counter5:inst2|lpm_counter:lpm_counter_component|cntr_slh:auto_generated|safe_q[0]
+To             : lpm_counter5:inst2|lpm_counter:lpm_counter_component|cntr_slh:auto_generated|safe_q[0]
 From Clock     : clk
 To Clock       : clk
-Failed Paths   : 25
-
-Type           : Clock Hold: 'load_instr'
-Slack          : Not operational: Clock Skew > Data Delay
-Required Time  : None
-Actual Time    : N/A
-From           : lpm_counter5:inst4|lpm_counter:lpm_counter_component|cntr_slh:auto_generated|safe_q[0]
-To             : lpm_counter5:inst4|lpm_counter:lpm_counter_component|cntr_slh:auto_generated|safe_q[0]
-From Clock     : load_instr
-To Clock       : load_instr
 Failed Paths   : 21
 
 Type           : Total number of failed paths
@@ -110,7 +80,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 46
+Failed Paths   : 21
 
 --------------------------------------------------------------------------------------
 

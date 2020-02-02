@@ -21,5 +21,5 @@ FUNCTION lpm_counter3
 )
 
 RETURNS (
-	q[1..0]
+	q[2..0]
 );
